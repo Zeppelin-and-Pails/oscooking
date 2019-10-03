@@ -6,7 +6,7 @@ import {
   primaryCardHeader,
   roseCardHeader,
   whiteColor
-} from "/jss/material-dashboard-react.js";
+} from "../../jss/material-dashboard-react.js";
 
 const cardHeaderStyle = {
   cardHeader: {
