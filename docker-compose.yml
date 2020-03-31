@@ -1,0 +1,26 @@
+version: '2'
+volumes:
+  dbdata1:
+
+services:
+    db:
+        image: postgres
+        ports:
+          - "54320:5432"
+        volumes:
+            - dbdata1:/var/lib/postgresql/data
+        environment:
+            - "POSTGRES_USER=oscooking"
+            - "POSTGRES_DB=oscooking"
+            - "POSTGRES_PASSWORD=secret"
+
+    frontend:
+        build:
+            context: .
+        ports:
+            - "3001:3000"
+        volumes:
+          - /app/node_modules
+          - .:/app
+          
+
