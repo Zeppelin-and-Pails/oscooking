@@ -2,7 +2,7 @@ import {
   blackColor,
   whiteColor,
   hexToRgb
-} from "/jss/material-dashboard-react.js";
+} from "../../jss/material-dashboard-react.js";
 
 const cardStyle = {
   card: {
