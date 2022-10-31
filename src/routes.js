@@ -1,14 +1,12 @@
 // @material-ui/icons
 import Home from "@material-ui/icons/Home";
 import Person from "@material-ui/icons/Person";
+import SearchIcon from '@mui/icons-material/Search';
 import LocationOn from "@material-ui/icons/LocationOn";
-import Notifications from "@material-ui/icons/Notifications";
 
 import HomePage from "views/Home/Home.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
-import TableList from "views/TableList/TableList.js";
 import Maps from "views/Maps/Maps.js";
-import NotificationsPage from "views/Notifications/Notifications.js";
 import Home from "./views/Home/Home";
 
 const routes = [
@@ -20,28 +18,22 @@ const routes = [
   },
   {
     path: "/user",
-    name: "User Profile",
-    icon: Person,
-    component: UserProfile,
+    name: "Profile",
+    icon: SearchIcon,
+    component: Search,
   },
   {
-    path: "/table",
-    name: "Table List",
-    icon: "content_paste",
-    component: TableList,
+    path: "/user",
+    name: "Profile",
+    icon: Person,
+    component: UserProfile,
   },
   {
     path: "/maps",
     name: "Maps",
     icon: LocationOn,
     component: Maps,
-  },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    icon: Notifications,
-    component: NotificationsPage,
-  },
+  }
 ];
 
 export default routes;
